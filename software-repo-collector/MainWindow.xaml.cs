@@ -33,7 +33,7 @@ namespace software_repo_collector
             {
                 path = config1.Path;
                 Properties.Settings.Default.Repository_Path = path;
-                Properties.Settings.Default.Save();
+                Properties.Settings.Default.Save();        
             }
         }
     }

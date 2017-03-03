@@ -9,7 +9,7 @@
     <Grid>
         <DockPanel HorizontalAlignment="Left" Height="44" LastChildFill="False" VerticalAlignment="Top" Width="658">
             <Menu DockPanel.Dock="Top">
-                <MenuItem x:Name="menu_Options" Header="_Options"> 
+                <MenuItem x:Name="menu_Options" Header="_Options">
                     <MenuItem x:Name="menu_Preferences" Header="_Preferences" Click="menu_Preferences_Click"/>
                     <Separator/>
                     <MenuItem Header="_Exit"/>

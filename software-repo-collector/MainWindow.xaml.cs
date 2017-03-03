@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Forms;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -23,6 +24,17 @@ namespace software_repo_collector
         public MainWindow()
         {
             InitializeComponent();
+        }
+        String path;
+        private void menu_Preferences_Click(object sender, RoutedEventArgs e)
+        {
+            Configuration1 config1 = new Configuration1();
+            if (config1.ShowDialog() == true)
+            {
+                path = config1.Path;
+                Properties.Settings.Default.Repository_Path = path;
+                Properties.Settings.Default.Save();
+            }
         }
     }
 }

@@ -34,5 +34,39 @@ namespace software_repo_collector.Properties {
                 this["Repository_Path"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Extension_Filter {
+            get {
+                return ((string)(this["Extension_Filter"]));
+            }
+            set {
+                this["Extension_Filter"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Collections.Specialized.StringCollection Name_Collections {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["Name_Collections"]));
+            }
+            set {
+                this["Name_Collections"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Collections.Specialized.StringCollection Pattern_Collections {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["Pattern_Collections"]));
+            }
+            set {
+                this["Pattern_Collections"] = value;
+            }
+        }
     }
 }

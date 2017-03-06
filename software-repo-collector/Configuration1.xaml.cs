@@ -14,6 +14,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Property = software_repo_collector.Properties.Settings;
 
 namespace software_repo_collector
 {
@@ -27,6 +28,8 @@ namespace software_repo_collector
             InitializeComponent();
         }
         String path;
+        String extension_filter;
+
         string[] fileEntries;
 
         public String Path
@@ -42,6 +45,14 @@ namespace software_repo_collector
             get
             {
                 return fileEntries;
+            }
+        }
+
+        public String Extension_Filter
+        {
+            get
+            {
+                return extension_filter;
             }
         }
 
@@ -73,8 +84,20 @@ namespace software_repo_collector
 
         private void btn_Save_And_Close_Click(object sender, RoutedEventArgs e)
         {
+            this.path = txt_Repository_Path_Result.Text;
+            this.extension_filter = txt_Extension_Filter.Text;
             this.DialogResult = true;
             this.Close();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            txt_Repository_Path_Result.Text = Properties.Settings.Default.Repository_Path;
+            txt_Extension_Filter.Text = Properties.Settings.Default.Extension_Filter;
+            foreach(String scol in Property.Default.Name_Collections)
+            {
+                list_Software_Names.Items.Add(scol);
+            }
         }
     }
 }
